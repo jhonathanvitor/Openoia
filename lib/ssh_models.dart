@@ -619,6 +619,10 @@ else:
         host.port.toString(),
         '-o',
         'ConnectTimeout=10',
+        // `sftp -b` força BatchMode=yes, o que desativa SSH_ASKPASS (senha/passphrase).
+        // O ssh usa o primeiro valor definido, então este -o precisa vir antes do -b.
+        '-o',
+        'BatchMode=no',
         ...commonOpts,
         '-b',
         batchFile.path,
