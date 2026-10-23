@@ -2,6 +2,11 @@
 
 Cliente Desktop Linux moderno desenvolvido em **Flutter (GTK3)** que integra:
 
+<img width="1135" height="719" alt="openoia-vpn" src="https://github.com/user-attachments/assets/ea1137d5-00a2-4419-963c-3e7ad6b098a1" />
+<img width="1141" height="723" alt="openoia-ssh" src="https://github.com/user-attachments/assets/d9937228-3533-4731-af01-205c6574cbd0" />
+
+
+
 - **Cliente OpenVPN**:
   - Conexão rápida via perfis `.ovpn` (perfis nunca são embutidos no AppImage; o perfil selecionado pelo usuário é criptografado localmente no cofre `vpn_profile.ovpn.enc`)
   - **Root Helper Hardened (`/usr/local/bin/vpn-openoia-root-helper`)**: sanitiza diretivas do perfil `.ovpn`, grava apenas em diretório protegido de propriedade do `root` (`/etc/openvpn/client/openoia/active.conf`, `0600`), força `--script-security 0` e nunca aceita exclusão de caminhos arbitrários
