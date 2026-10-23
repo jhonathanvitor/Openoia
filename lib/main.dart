@@ -186,24 +186,6 @@ class _VpnDashboardPageState extends State<VpnDashboardPage> {
     super.dispose();
   }
 
-  String _resolveDefaultOvpn() {
-    final dlDir = Directory('$_homeDir/Downloads');
-    if (dlDir.existsSync()) {
-      try {
-        final ovpnFiles = dlDir
-            .listSync()
-            .whereType<File>()
-            .where((f) => f.path.toLowerCase().endsWith('.ovpn'))
-            .toList();
-        if (ovpnFiles.isNotEmpty) {
-          ovpnFiles.sort((a, b) => a.path.compareTo(b.path));
-          return ovpnFiles.first.path;
-        }
-      } catch (_) {}
-    }
-    return '$_homeDir/Downloads/client-config.ovpn';
-  }
-
   void _initDirectoriesAndLoad() {
     try {
       _configDir.createSync(recursive: true);
@@ -220,7 +202,7 @@ class _VpnDashboardPageState extends State<VpnDashboardPage> {
       }
     } catch (_) {}
 
-    String ovpnPath = _resolveDefaultOvpn();
+    String ovpnPath = '';
     if (_settingsFile.existsSync()) {
       try {
         final data = _vault.readEncryptedJson(_settingsFile);
@@ -250,7 +232,7 @@ class _VpnDashboardPageState extends State<VpnDashboardPage> {
     _ovpnCtrl.text = ovpnPath;
 
     // Cache/encrypt the selected .ovpn profile inside the local encrypted vault
-    if (File(ovpnPath).existsSync()) {
+    if (ovpnPath.isNotEmpty && File(ovpnPath).existsSync()) {
       try {
         final rawOvpn = File(ovpnPath).readAsStringSync();
         _vault.writeEncryptedTextFile(_encryptedProfileFile, rawOvpn);
@@ -285,7 +267,9 @@ class _VpnDashboardPageState extends State<VpnDashboardPage> {
       } catch (_) {}
     }
 
-    _appendLog('Sistema pronto. Perfil configurado: $ovpnPath');
+    _appendLog(ovpnPath.isEmpty
+        ? 'Sistema pronto. Selecione um arquivo .ovpn para conectar.'
+        : 'Sistema pronto. Perfil configurado: $ovpnPath');
   }
 
   /// Saves non-sensitive settings in encrypted settings.json and stores VPN password
@@ -419,7 +403,11 @@ class _VpnDashboardPageState extends State<VpnDashboardPage> {
     }
 
     if (ovpnContent == null || ovpnContent.trim().isEmpty) {
-      _showSnack('Arquivo .ovpn não encontrado em: $ovpnPath', isError: true);
+      _showSnack(
+          ovpnPath.isEmpty
+              ? 'Selecione um arquivo .ovpn antes de conectar.'
+              : 'Arquivo .ovpn não encontrado em: $ovpnPath',
+          isError: true);
       return;
     }
 
