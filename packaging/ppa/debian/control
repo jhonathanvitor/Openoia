@@ -1,0 +1,17 @@
+Source: openoia
+Section: net
+Priority: optional
+Maintainer: Jhonathan Vitor <jhonathanvitor@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/jhonathanvitor/openoia
+Rules-Requires-Root: no
+
+Package: openoia
+Architecture: amd64
+Depends: libgtk-3-0, libsecret-1-0, openvpn, openssh-client, python3,
+ libayatana-appindicator3-1 | libappindicator3-1, zenity, ${misc:Depends}
+Description: Cliente Desktop Linux para OpenVPN, SSH e SFTP
+ Openoia integra cliente OpenVPN, gerenciador de credenciais via Secret
+ Service, workspace SSH/SFTP com terminal interativo e ícone na barra
+ superior (AppIndicator).

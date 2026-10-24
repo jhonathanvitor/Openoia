@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+# Binários pré-compilados do Flutter (libs próprias em /opt/openoia).
+override_dh_auto_build:
+override_dh_auto_test:
+override_dh_strip:
+override_dh_shlibdeps:
+override_dh_dwz:
+override_dh_makeshlibs:
