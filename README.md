@@ -34,7 +34,15 @@ Cliente Desktop Linux moderno desenvolvido em **Flutter (GTK3)** que integra:
 ## Instalação via APT (Ubuntu/Debian)
 
 ```bash
+curl -fsSL https://jhonathanvitor.github.io/openoia/install.sh | sudo bash
+```
+
+Ou manualmente:
+
+```bash
 curl -fsSL https://jhonathanvitor.github.io/openoia/openoia.gpg | sudo tee /usr/share/keyrings/openoia.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/openoia.gpg] https://jhonathanvitor.github.io/openoia stable main" | sudo tee /etc/apt/sources.list.d/openoia.list
 sudo apt update && sudo apt install openoia
 ```
+
+Depois disso, as atualizações chegam com `sudo apt update && sudo apt upgrade`.

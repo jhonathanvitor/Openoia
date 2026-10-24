@@ -39,10 +39,14 @@ apt-ftparchive \
 gpg --batch --yes -u "$GPG_KEY" --clearsign -o "dists/$CODENAME/InRelease" "dists/$CODENAME/Release"
 gpg --batch --yes -u "$GPG_KEY" -abs -o "dists/$CODENAME/Release.gpg" "dists/$CODENAME/Release"
 gpg --export "$GPG_KEY" > openoia.gpg   # chave binária, usada com signed-by
+cp "$ROOT/packaging/apt/install.sh" install.sh
 touch .nojekyll
 cat > index.html <<'HTML'
 <!doctype html><meta charset="utf-8"><title>Openoia APT</title>
-<pre>curl -fsSL https://jhonathanvitor.github.io/openoia/openoia.gpg | sudo tee /usr/share/keyrings/openoia.gpg >/dev/null
+<pre>curl -fsSL https://jhonathanvitor.github.io/openoia/install.sh | sudo bash
+
+# ou manualmente:
+curl -fsSL https://jhonathanvitor.github.io/openoia/openoia.gpg | sudo tee /usr/share/keyrings/openoia.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/openoia.gpg] https://jhonathanvitor.github.io/openoia stable main" | sudo tee /etc/apt/sources.list.d/openoia.list
 sudo apt update &amp;&amp; sudo apt install openoia</pre>
 HTML
