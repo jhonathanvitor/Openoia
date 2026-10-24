@@ -1,0 +1,42 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64
+Codename: stable
+Components: main
+Date: Sat, 24 Oct 2026 05:27:03 +0000
+Label: Openoia
+Origin: Openoia
+Suite: stable
+MD5Sum:
+ 250edfbfe19632e8346c2bd5e1536abc              138 Release
+ 6614b9189d6c971e41d8471828fcf5fc              811 main/binary-amd64/Packages
+ 71d7de82f08f3fa3c0e8a0fcf2514e55              565 main/binary-amd64/Packages.gz
+SHA1:
+ 421e46527cc5a880e08bc1aa397d51d51e7ec652              138 Release
+ 7da7fb827c69b7b3bf30ac1bb3b7cf902c8ab050              811 main/binary-amd64/Packages
+ 34d19c98c7cc1ba60e077c095a7500ffa0d56470              565 main/binary-amd64/Packages.gz
+SHA256:
+ 54616a85777f0450f9208c484d9601f046fb4e07a1744c395d5bff1820cf6033              138 Release
+ 84e07bcacb2820e0c02dfc666686edb695f975e6a42accc0f2d3bcf84d6bd127              811 main/binary-amd64/Packages
+ 4bda85d23ad3be85ae7d6460f28e26f1dbc1f671ff28c4c762de808f4567dc54              565 main/binary-amd64/Packages.gz
+SHA512:
+ 6c40f06533da0f4122e0470afc897e799e9b29db1bfe5063329e74ef744fc613034b0e486f29a885c50e1aa5414ff8d914a1f764716b07d86b8a206e5f6585d0              138 Release
+ 3e3695c790834ccc4b47021e4661f26dac18d6f39111a70453facca04a5eded2aa5349f192bd2a146e68a3719de8aa8492497bdf83547f512784b69dc9539cd8              811 main/binary-amd64/Packages
+ 3ba860f456dcf58073e5a55718c71b556ae3c05a177edd2251b774d38a28f70a8975bf94ae3662c174d2a8c2f4eac0ddf72f26693d18bbff3c2577f80318840b              565 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE3O0qA83zLK4Ng1Epusn+NmkOzQwFAmrcQacACgkQusn+NmkO
+zQwkghAAizrcAvVPOcJYL9G81RYtWxpUmtboqUllC6Anue8J05j3Zs5BLV81zO9y
+gW8BvFUsjwMigL1iBYe+mAdNZEQ7U7kVi2/4+zhE8Z8Qcr5/0tUYzEfLFGIO0uRa
+30ZlxjTAwhlZSTXfm+51QL+3jnYG8phfD0+ZOsdyvadjhnh0s8Oz7yG164F2H54s
+OkbuXpMGM6nsc1UlY01cFlsElKSvFmskJo6WlzsKYFUfXzvDl5MoG47kqLJISE6x
+BNLsjnnyXiq/gAxa9ngMvMGhJGz44RDF/gtkn3qpRqFtLJXtiVD1iAh8nN6+xUys
+le22+an8lwklvwFNyRHn+JkhMcsZW1QEIO29IaQOa/nFLIvtkuDH+gbLkJCwZdP5
+wZriNlKkoJvTbdaOgeOO6cKtj8Wiy6jqOWc1bEbC/7sx7oYW72hApX5ynPHgMiIh
+Wg6fiGRNJrTezhXivYzsf1cBHyqssqnZU0te9dzdKGfNQXhoeQAqtGrUlh5aBiAN
+EBbPXoUw1U17EM7+oDsNFgWK9/EYIZeuzSMdYzl3xkMfuIvG20IT44G+GHPaf8XV
+HyipcdsdhaV63JWNYhVslHSXXEzTO+TqochYex0cgdYrlChcAQUFv8pgYY/3aE2y
+yKYs+uR1jXx5Q6IrpbaaSpB/D5uXjniefbgAEwBL80GHmKKzqp8=
+=a7ul
+-----END PGP SIGNATURE-----

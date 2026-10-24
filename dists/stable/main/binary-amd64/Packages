@@ -1,0 +1,19 @@
+Package: openoia
+Architecture: amd64
+Version: 1.0.0
+Priority: optional
+Section: default
+Maintainer: jhonathanvitor <jhonathanvitor@gmail.com>
+Installed-Size: 24750
+Depends: libgtk-3-0, libsecret-1-0, openvpn, openssh-client, python3, libayatana-appindicator3-1 | libappindicator3-1, zenity
+Filename: pool/main/o/openoia/openoia_1.0.0_amd64.deb
+Size: 10190018
+MD5sum: 6c5056a146e489fee2c94dacb1d976d6
+SHA1: b7df080490d87c9fc817f6a47bbc36296f13abcf
+SHA256: 9f35b8907e962a76fa965ff3548d236fde92c14ca22b8ca0e6b2935aed0713f7
+SHA512: 7e9ffe41de2b985a86ed035c02b8b683b83b8f4d5574ca2d87423017bac60b724c2a5eaf4c31aa8a7243a3fff371a269e74a2e9fd713aa554fd1ec7c90221988
+Homepage: https://github.com/jhonathanvitor/openoia
+Description: Openoia - Cliente Desktop Linux para OpenVPN, SSH e SFTP.
+License: unknown
+Vendor: none
+
