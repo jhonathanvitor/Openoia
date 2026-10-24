@@ -2,7 +2,8 @@
 
 Cliente Desktop Linux moderno desenvolvido em **Flutter (GTK3)** que integra:
 
-<img width="1135" height="719" alt="openoia-vpn" src="https://github.com/user-attachments/assets/ea1137d5-00a2-4419-963c-3e7ad6b098a1" />
+<img width="1143" height="723" alt="Captura de tela de 2026-10-24 01-42-10" src="https://github.com/user-attachments/assets/c003f982-dda4-4add-8b5e-169eb2c54e1e" />
+
 <img width="1141" height="723" alt="openoia-ssh" src="https://github.com/user-attachments/assets/d9937228-3533-4731-af01-205c6574cbd0" />
 
 
